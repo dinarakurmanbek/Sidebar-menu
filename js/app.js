@@ -1,9 +1,22 @@
-/* Set the width of the side navigation to 250px */
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
+
+// This function initializes user media
+function getUserMedia(options, successCallback, failureCallback) {
+  if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    return navigator.mediaDevices.getUserMedia(options)
+      .then(successCallback)
+      .catch(failureCallback);
+  }
+  throw new Error('User Media API not supported.');
 }
 
-/* Set the width of the side navigation to 0 */
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
+
+
+
+
+
+
+
+// offline storage
+
+
 }
